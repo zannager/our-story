@@ -1,11 +1,17 @@
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import WeddingPreview from "../components/WeddingPreview";
+import StoryTimeline from "../components/Timeline";
+import WeddingSection from "../components/WeddingSection";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Our Story</h1>
-
-      <p>Greg & [Partner's Name]</p>
-
-      <p>June 20, 2026</p>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <WeddingPreview />
+      <WeddingSection />
+      <StoryTimeline />
+    </>
   );
 }
