@@ -8,7 +8,7 @@ import {
 export default function StoryCard({
   title,
   description,
-  image,
+  cover,
   onClick,
 }) {
   return (
@@ -28,7 +28,7 @@ export default function StoryCard({
         <Box
           sx={{
             height: 340,
-            backgroundImage: `url(${image})`,
+            backgroundImage: `url(${cover})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             position: "relative",

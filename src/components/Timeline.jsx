@@ -63,7 +63,7 @@ export default function StoryTimeline() {
 
           <TimelineContent>
             <Typography variant="h6">
-              June 20, 2026
+              June 26, 2026
             </Typography>
 
             <Typography color="text.secondary">
