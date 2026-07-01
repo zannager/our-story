@@ -150,25 +150,44 @@ export default function GalleryDialog({
 
       {/* Video Player */}
       <Dialog
-        open={videoOpen}
-        onClose={() => setVideoOpen(false)}
-        maxWidth="lg"
-        fullWidth
-      >
-        <Box sx={{ bgcolor: "black" }}>
-          <video
-            controls
-            autoPlay
-            style={{
-              width: "100%",
-              display: "block",
-            }}
-          >
-            <source src={video?.src} type="video/mp4" />
-            Your browser does not support video playback.
-          </video>
-        </Box>
-      </Dialog>
+  open={videoOpen}
+  onClose={() => setVideoOpen(false)}
+  fullScreen
+>
+  <Box
+    sx={{
+      width: "100%",
+      height: "100vh",
+      bgcolor: "black",
+      position: "relative",
+    }}
+  >
+    <IconButton
+      onClick={() => setVideoOpen(false)}
+      sx={{
+        position: "absolute",
+        top: 20,
+        right: 20,
+        color: "white",
+        zIndex: 2,
+      }}
+    >
+      <CloseIcon />
+    </IconButton>
+
+    <iframe
+      src={`https://www.youtube.com/embed/${video?.youtubeId}`}
+      title={video?.title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+      style={{
+        width: "100%",
+        height: "100%",
+        border: "none",
+      }}
+    />
+  </Box>
+</Dialog>
     </>
   );
 }

@@ -25,7 +25,7 @@ export default function WeddingSection() {
 
     video: {
       title: "Our Pre-Wedding Film",
-      src: "/videos/prenup.mp4",
+      youtubeId: "Q9FH-05HiqA",
       thumbnail: "/images/wedding/prewedding.jpg",
     },
   }, 
